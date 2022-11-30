@@ -1,0 +1,102 @@
+@use 'src/styles/_vars.scss';
+main {
+  width: 100vw;
+  height: 100vh;
+  background: vars.$colorLightGreen;
+}
+.singlePage-container{
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background: vars.$colorLightGreen;
+  
+}
+.largeComponent{
+  display: block;
+  flex-basis:60%;
+  max-width: 780px;
+  min-width: 500px;
+  max-height: 90vh;
+  color: black;
+  margin: 40px 150px 40px 20px;
+  background: vars.$colorBeige;
+  box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.34);
+  overflow: auto;
+}
+.smallComponent{
+  flex-basis:33.33%;
+  max-width: 600px;
+  max-height: 90vh;
+  margin: 40px;
+  margin-left: 200px;
+  background: vars.$colorBeige;
+  box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.34);
+}
+@media only screen and (min-width: 1024px) {
+  .largeComponent{
+    position: relative;
+    display: block;
+  }
+  .countCart-container{
+    position: relative;
+    width: 0;
+    height: 0;
+  }
+  .headerCart {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    right: 120px;
+    height: 90px;
+    width: 90px;
+    z-index: 20;
+    margin: 0;
+    background: vars.$colorMediumGreen;
+    color: vars.$colorLightGreen;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 7px 8px -3px rgba(0,0,0,0.34);
+    cursor: pointer;
+    border: solid 2px vars.$colorDarkGreen;
+  }
+.cart {
+  position: static;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .count {
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    right: -18px;
+    top: 10px;
+    color: vars.$colorMediumGreen;
+    padding-bottom: 1px;
+    border: solid 2px  vars.$colorOrange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & p {
+      position: relative;
+      font-size: 1.2em;
+    }
+  }
+}
+@media only screen and (min-width: 1290px) {
+ 
+  .singlePage-container {
+    background-image: url('src/assets/logo.svg');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 5%;
+  }
+}
